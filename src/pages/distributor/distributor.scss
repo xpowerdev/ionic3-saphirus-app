@@ -1,0 +1,23 @@
+page-distributor {
+    ion-footer {
+        background: #fff;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .tab_btn {
+        text-align: center;
+        font-size: 1.2em;
+        padding: 12px 0;
+        color: #808080;
+    }
+
+    .tab_btn_active {
+        background: #dfecf9;
+        color: #2b82d4;
+    }
+
+    .tab_icon {
+        height: 1.2em;
+        vertical-align: -4px;
+    }
+}

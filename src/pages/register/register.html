@@ -1,0 +1,55 @@
+<ion-content>
+  <img src="assets/imgs/logo-chico.png" class="logo" alt="logo">
+  <ion-row>
+    <ion-col style="margin-top: 25vh;">
+      <ion-list>
+  
+        <ion-item>
+          <ion-input [(ngModel)]="name" placeholder="Nombre" type="text"></ion-input>
+        </ion-item>
+  
+        <ion-item>
+          <ion-input [(ngModel)]="lastname" placeholder="Apellido" type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input [(ngModel)]="tel" placeholder="Teléfono" type="text"></ion-input>
+        </ion-item>
+  
+        <ion-item>
+          <ion-input [(ngModel)]="address" placeholder="Dirección" type="text"></ion-input>
+        </ion-item>
+  
+        <ion-row>
+          <ion-col no-padding padding-right>
+            <ion-item>
+              <ion-input [(ngModel)]="city" placeholder="Localidad" type="text"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col no-padding>
+            <ion-item>
+              <ion-input [(ngModel)]="province" placeholder="Provincia" type="text"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+  
+        <ion-item>
+          <ion-input [(ngModel)]="dni" placeholder="DNI" type="number"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input [(ngModel)]="email" placeholder="Email" type="email"></ion-input>
+        </ion-item>
+  
+        <ion-item>
+          <ion-input [(ngModel)]="password" placeholder="Clave" type="password"></ion-input>
+        </ion-item>
+  
+      </ion-list>  
+    </ion-col>
+  </ion-row>
+  <ion-row class="btn_group_bottom">
+    <ion-col col-12><button ion-button round full class="btn" (click)="register()">Registrarse</button></ion-col>
+    <ion-col col-12 no-padding><button ion-button clear full class="btn-outline" (click)="toLogin()">Ya soy revendedor</button></ion-col>
+  </ion-row>
+</ion-content>

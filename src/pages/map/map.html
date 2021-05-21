@@ -1,0 +1,9 @@
+<ion-header>
+  <ion-toolbar no-padding>
+    <main-header [data]="main_menu"></main-header>
+    <sub-header1 (itemBtnClick)="startSearch($event)"></sub-header1>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div #map id="map"></div> 
+</ion-content>

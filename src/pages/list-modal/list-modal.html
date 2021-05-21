@@ -1,0 +1,29 @@
+<ion-content>
+  <ion-grid class="modal">
+      <ion-row class="header">
+          <ion-col text-center padding-vertical>{{name}}</ion-col>
+      </ion-row>
+      <ion-row class="content">
+          <ion-col col-12 text-center padding>{{city}}, {{province}}</ion-col>
+          <ion-col *ngIf="rating" col-12 text-center no-padding class="address_no">{{rating}}</ion-col>   
+          <ion-col col-12 text-center class="address_sub">{{level}}</ion-col> 
+          <ion-col col-12 text-center>
+            <rating [(ngModel)]="star" readOnly="true" max="5" emptyStarIconName="md-star-outline" halfStarIconName="md-star-half" starIconName="md-star" nullable="false"></rating>
+          </ion-col>       
+          <ion-row *ngIf="!is_visible">
+              <ion-col col-12 padding-left padding-right>
+                  <button ion-button round class="button2" (click)="toDetail()">VER MÁS</button>
+              </ion-col>
+          </ion-row>                
+          <ion-row *ngIf="is_visible">
+            <ion-col col-6 padding-left>
+                <button ion-button round class="button2" (click)="toDetail()">VER MÁS</button>
+            </ion-col>
+            <ion-col col-6 padding-right>
+                <button ion-button round class="button2" (click)="confirm()">ASOCIARME</button>
+            </ion-col>
+        </ion-row>
+      </ion-row>
+  </ion-grid>
+</ion-content>
+  

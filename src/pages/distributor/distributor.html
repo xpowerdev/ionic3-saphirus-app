@@ -1,0 +1,13 @@
+<ion-nav [root]="root"></ion-nav>
+<ion-footer>
+  <ion-row>
+    <ion-col class="tab_btn" [ngClass]="flag? 'tab_btn_active' : ''" (click)="list()">
+      <img src="assets/imgs/{{list_img}}.png" class="tab_icon" alt="list">
+      Listado
+    </ion-col>
+    <ion-col class="tab_btn" [ngClass]="flag? '' : 'tab_btn_active'" (click)="map()">
+      <img src="assets/imgs/{{map_img}}.png" class="tab_icon" alt="list">
+      Mapa
+    </ion-col>
+  </ion-row>
+</ion-footer>

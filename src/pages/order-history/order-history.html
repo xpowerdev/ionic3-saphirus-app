@@ -1,0 +1,9 @@
+<ion-header>
+  <ion-toolbar no-padding>
+    <main-header></main-header>
+    <sub-header2 [category]="category" (categoryClick)="filter($event)"></sub-header2>
+  </ion-toolbar>  
+</ion-header>
+<ion-content>
+  <m-item3 *ngFor="let history of histories" [data]="history"></m-item3>
+</ion-content>

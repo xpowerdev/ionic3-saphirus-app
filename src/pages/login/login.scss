@@ -1,0 +1,92 @@
+page-login {
+    ion-content {
+        background: url('./../assets/imgs/bg.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+
+    .logo {
+        height: 16vh;
+        position: absolute;
+        top: 20vh;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    .btn_group_mid {
+        width: 100%;
+        padding: 0 10vw;
+
+        margin-top: 36vh;
+        
+        ion-item {
+            background: transparent;
+            padding-left: 0px !important;            
+
+            img {
+                height: 1em;
+            }
+
+            ion-label {
+                color: #fff !important;
+            }
+
+            .text-input-md,
+            .text-input-ios {
+                color: #fff;
+            }
+        }
+
+        .item-md.item-input.item-input-has-focus .item-inner, .item-md.item-input.input-has-focus .item-inner,
+        .item-md.item-input.item-input-has-focus:last-child, .item-md.item-input.input-has-focus:last-child {
+            border-bottom-color: #dedede !important;
+            box-shadow: none !important;
+        }
+
+        .item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner, .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
+            border-bottom-color: #dedede;
+            box-shadow: none;
+        }
+
+        .list-md .item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus):last-child, .list-md .item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus):last-child {
+            border-bottom-color: #dedede;
+            box-shadow: none;
+        }
+
+        .list-ios > .item-block:first-child {
+            border-top: none !important;
+        }
+
+        .forgot_pass {
+            float: right;
+            color: #fff;
+            text-align: right;
+            margin-bottom: 20px;
+        }
+
+        .list-ios {
+            margin-bottom: 20px;
+        }
+    } 
+    
+    .btn {
+        background-color: #0887e7 !important;
+    }
+
+    .btn_group_bottom {
+        width: 100%;
+        padding: 0 10vw;
+
+        margin-top: 5vh;
+    } 
+    
+    .btn-outline {
+        width: 100%;
+        border-color: #fff;
+        color: #fff;
+    }
+
+    .button-outline-ios.activated {
+        background-color: transparent !important;
+    }
+}

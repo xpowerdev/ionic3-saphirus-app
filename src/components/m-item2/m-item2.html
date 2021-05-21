@@ -1,0 +1,18 @@
+<ion-row padding-horizontal align-items-center style="margin-bottom: 5px;">
+  <ion-col col-4>
+    <img src="{{product_root}}{{data.image}}">
+  </ion-col>
+  <ion-col col-8>
+    <div class="title">{{data.name}}</div>
+    <div style="display: inline-flex; width: 100%">
+      <div class="number">
+        <ion-icon name="md-remove" (click)="minus()"></ion-icon>
+        <span>{{count}}</span>
+        <ion-icon name="md-add" (click)="plus()"></ion-icon>
+      </div>
+      <div style="width: 50%">
+        <button ion-button round (click)="itemBtnClicked()">AGREGAR</button>
+      </div>
+    </div>
+  </ion-col>
+</ion-row>

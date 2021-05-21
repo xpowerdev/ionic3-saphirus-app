@@ -1,0 +1,27 @@
+page-products {
+    .title {
+        font-size: 1.8em;
+        font-weight: 600;
+        padding: 8px;
+        text-align: center;
+        color: #0887e7;
+        text-transform: uppercase;
+    }
+    
+    ion-content {
+        background-color: #dadada !important;   
+
+        .container {
+            background: #fff;
+            height: calc(50vw - 36px);
+            text-align: center;
+            padding: 10px;
+        }   
+
+        .name {
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+    }
+
+}

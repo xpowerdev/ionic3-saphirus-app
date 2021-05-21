@@ -1,0 +1,65 @@
+<ion-header>
+    <ion-toolbar no-padding>
+      <main-header></main-header>
+    </ion-toolbar>  
+</ion-header>
+<ion-content padding-bottom>
+  <ion-row>
+    <ion-col col-12 text-center class="header">NUEVO PEDIDO</ion-col>
+  </ion-row>
+
+  <div *ngIf="hasOrder">
+    <ion-row class="title">
+      <ion-col col-4 text-left padding-left padding-top>Producto</ion-col>
+      <ion-col col-4 text-center padding-top>Categoria</ion-col>
+      <ion-col col-4 text-center padding-right padding-top>Unidades</ion-col>
+    </ion-row>
+    
+    <ion-row class="item" *ngFor="let order of orders">
+      <ion-col col-4 text-left padding-left padding-top>{{order.name}}</ion-col>
+      <ion-col col-4 text-center padding-top>{{order.category_name}}</ion-col>
+      <ion-col col-4 text-center padding-right>
+        <div class="number">
+          <ion-icon name="md-remove" (click)="changeNumber(order, 'minus')"></ion-icon>
+          <span>{{order.count}}</span>
+          <ion-icon name="md-add" (click)="changeNumber(order, 'plus')"></ion-icon>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="total">
+      <ion-col col-8 text-left padding-left padding-bottom>Total</ion-col>
+      <ion-col col-4 text-center padding-right padding-bottom>{{total}}</ion-col>
+    </ion-row>
+
+    <ion-row text-center>
+      <ion-col padding-vertical class="location">Pedido Nº {{newOrderNo}}</ion-col>
+    </ion-row>
+
+    <ion-row padding-horizontal>
+      <button ion-button round full (click)="confirm()">Ralizar PEDIDO</button>
+    </ion-row>
+  </div>
+
+  <div *ngIf="!hasOrder">
+    <ion-row>
+      <img src="assets/imgs/order.png" class="order">
+    </ion-row>
+    <div class="no-order-title">Tu carrito está vacío</div>
+    <div class="no-order-title">Empeza a llenarlo</div>
+    <ion-row padding>
+      <button ion-button round full (click)="toProducts()">VER CATÁLOGO</button>
+    </ion-row>
+  </div>
+  
+  <!-- <img *ngIf="hasOrder" src="assets/imgs/note.png" height="50" (click)="toProducts()" class="note"> -->
+  <ion-fab *ngIf="hasOrder" right bottom>
+    <button ion-fab no-padding><img src="assets/imgs/note.png" (click)="toProducts()" style="z-index: 999;"></button>    
+  </ion-fab>
+</ion-content>
+
+<!-- <ion-footer *ngIf="hasOrder" no-border>
+  <ion-row padding float-right>
+    <img src="assets/imgs/note.png" height="50" (click)="toProducts()">
+  </ion-row>
+</ion-footer> -->

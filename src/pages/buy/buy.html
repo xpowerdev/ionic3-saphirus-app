@@ -1,0 +1,11 @@
+<ion-header>
+    <ion-toolbar no-padding>
+        <main-header [data]="main_header" (backClick)="back()"></main-header>      
+        <ion-row style="min-height: 46px;">
+            <ion-col class="category-title">{{category_name}}</ion-col>
+        </ion-row>
+    </ion-toolbar>  
+</ion-header>
+<ion-content>
+    <m-item2 *ngFor="let product of products" [data]="product" (itemBtnClick)="addToCart($event)"></m-item2>
+</ion-content>

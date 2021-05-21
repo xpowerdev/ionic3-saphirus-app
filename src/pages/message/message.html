@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-toolbar no-padding>
+    <main-header></main-header>
+    <ion-row>
+      <ion-col col-12 text-center class="title">MENSAJES</ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content margin-bottom>
+  <m-item4 *ngFor="let message of messages" [message]="message"></m-item4>
+</ion-content>

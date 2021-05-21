@@ -1,0 +1,65 @@
+<ion-menu [content]="sidemenu" [swipeEnabled]="false">
+    <ion-content class="side-menu">
+        <ion-grid class="sm-header">
+            <div class = "sm-profile" (click)="toPage('ProfilePage', null)">
+                <img src = "{{avatar_root}}{{user?.image}}" width = "100%" height = "100%" alt = "user-img">
+            </div>
+            <ion-row>
+                <ion-col col-12 class="p-name" text-center padding-top>
+                    {{user?.firstname}} {{user?.lastname}}
+                </ion-col>
+                <ion-col col-12 class="p-address" text-center no-padding>
+                    {{user?.city}}, {{user?.province}}
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+        <ion-grid class="sm-content">
+            <ion-row *ngIf="dist_id" class="item" [ngClass]="actived_item==1? 'active' : ''" align-items-center padding-horizontal (click)="toPage('ProductsPage', 1)">
+                <ion-col col-2>
+                    <img src = "assets/imgs/icons/icon-1.png">
+                </ion-col>
+                <ion-col col-10 padding-vertical class="title">Hacer Pedido</ion-col>
+            </ion-row>
+            <ion-row *ngIf="dist_id" class="item" [ngClass]="actived_item==2? 'active' : ''" align-items-center padding-horizontal (click)="toPage('OrderHistoryPage', 2)">
+                <ion-col col-2>
+                    <img src = "assets/imgs/icons/icon-2.png">
+                </ion-col>
+                <ion-col col-10 padding-vertical class="title">Mis Pedidos</ion-col>
+            </ion-row>
+            <ion-row *ngIf="dist_id" class="item" [ngClass]="actived_item==3? 'active' : ''" align-items-center padding-horizontal (click)="toPage('DetailPage', 3)">
+                <ion-col col-2>
+                    <img src = "assets/imgs/icons/icon-3.png">
+                </ion-col>
+                <ion-col col-10 padding-vertical class="title">Mi Distribuidor</ion-col>
+            </ion-row>
+            <ion-row class="item" [ngClass]="actived_item==4? 'active' : ''" align-items-center padding-horizontal (click)="toPage('DistributorPage', 4)">
+                <ion-col col-2>
+                    <img src = "assets/imgs/icons/icon-4.png">
+                </ion-col>
+                <ion-col col-10 padding-vertical class="title">Buscar Distribuidores</ion-col>
+            </ion-row>
+            <ion-row *ngIf="dist_id" class="item" [ngClass]="actived_item==5? 'active' : ''" align-items-center padding-horizontal (click)="toPage('MessagePage', 5)">
+                <ion-col col-2>
+                    <img src = "assets/imgs/icons/icon-5.png">
+                </ion-col>
+                <ion-col col-8 padding-vertical class="title">Mensajes</ion-col>
+                <ion-col col-2 text-right *ngIf="messages"><span>{{messages}}</span></ion-col>
+            </ion-row>
+            <ion-row class="item" align-items-center padding-horizontal>
+                <ion-col col-2>
+                    <img src = "assets/imgs/icons/icon-6.png">
+                </ion-col>
+                <ion-col col-10 padding-vertical class="title">Configuración</ion-col>
+            </ion-row>
+            <ion-row class="item" [ngClass]="actived_item==7? 'active' : ''" align-items-center padding-horizontal (click)="toPage('LoginPage', 7)">
+                <ion-col col-2>
+                    <img src = "assets/imgs/icons/icon-7.png">
+                </ion-col>
+                <ion-col col-10 padding-vertical class="title">Salir</ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-content>
+</ion-menu>
+
+
+<ion-nav [root]="rootPage" #sidemenu></ion-nav>

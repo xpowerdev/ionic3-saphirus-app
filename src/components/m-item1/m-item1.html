@@ -1,0 +1,19 @@
+<ion-row align-items-center>
+  <ion-col col-8>
+    <div class="i_header">{{data.name}} <span>{{data.rating}}</span></div>
+    <div class="i_address">{{data.city}}, {{data.province}} <span>({{data.distance}}km)</span></div>
+    <div class="voter">
+      <rating [(ngModel)]="rate" readOnly="true" max="5" emptyStarIconName="md-star-outline" halfStarIconName="md-star-half" starIconName="md-star" nullable="false"></rating>
+      <span>{{data.voter}} valoraciones</span>
+    </div>
+  </ion-col>
+  <ion-col col-4>
+    <div>
+      <button ion-button round full (click)="btnClick('page')">VER MÁS</button>
+    </div>
+    <div *ngIf="data.is_visible">
+      <button ion-button round full (click)="btnClick('modal')">ASOCIARME</button>
+    </div>
+  </ion-col>
+</ion-row>
+<div style="background: #dadada; height: 5px;"></div>

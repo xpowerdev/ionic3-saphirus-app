@@ -1,0 +1,12 @@
+<ion-grid padding-horizontal>
+  <ion-row align-items-center>
+    <ion-col col-7 class="dist-name">{{message.from}}</ion-col>
+    <ion-col col-5 text-right class="time">{{changeTimezone(message.date.date, message.date.timezone, message.date.timezone_type)}}</ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col style="padding: 0px 5px; font-size: 0.8em;">{{message.status}}</ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>{{message.message}}</ion-col>
+  </ion-row>
+</ion-grid>

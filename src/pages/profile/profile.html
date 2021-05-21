@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar no-padding>
+    <main-header [data]="main_menu"></main-header>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding-bottom>
+
+  <ion-grid class="profile-header" padding-vertical>
+    <div class = "img-container">
+        <img src = "{{avatar_root}}{{user?.image}}" width = "100%" height = "100%">
+    </div>
+    <div class = "camera" (click)="getImage()"></div>
+    <ion-row *ngIf="user">
+        <ion-col col-12 class="p-name" text-center padding-top>
+            {{user?.firstname}} {{user?.lastname}}
+        </ion-col>
+        <ion-col col-12 class="p-address" text-center no-padding>
+            {{user?.city}}, {{user?.province}}
+        </ion-col>
+    </ion-row>
+  </ion-grid> 
+
+  <ion-grid no-padding>
+    <ion-row padding-horizontal padding-top class="info-header">Acerca de mi
+      <img src="assets/imgs/edit.png" class="edit" (click)="toEdit()">
+    </ion-row>
+    <ion-row padding-horizontal padding-top *ngIf="user">
+      <ion-col col-12 margin-left class="label">Revendedor/a desde</ion-col>
+      <ion-col col-12 margin-left class="value">{{user?.created_at | dateformat}}</ion-col>
+    </ion-row>
+    <ion-row padding-horizontal padding-top *ngIf="user">
+      <ion-col col-12 margin-left class="label">Email</ion-col>
+      <ion-col col-12 margin-left class="value">{{user?.email}}</ion-col>
+    </ion-row>    
+    <ion-row padding-horizontal padding-top *ngIf="user">
+      <ion-col col-12 margin-left class="label">Teléfono</ion-col>
+      <ion-col col-12 margin-left class="value">{{user?.tel}}</ion-col>
+    </ion-row>
+    <ion-row padding-horizontal padding-top *ngIf="user">
+      <ion-col col-12 margin-left class="label">DNI</ion-col>
+      <ion-col col-12 margin-left class="value">{{user?.dni}}</ion-col>
+    </ion-row>
+    <ion-row padding-horizontal padding-top *ngIf="user">
+      <ion-col col-12 margin-left class="label">Dirección</ion-col>
+      <ion-col col-12 margin-left class="value">{{user?.address}}, {{user?.city}}</ion-col>
+    </ion-row>
+    <ion-row padding-horizontal padding-top *ngIf="user">
+      <ion-col col-12 margin-left class="label">Provincia</ion-col>
+      <ion-col col-12 margin-left class="value">{{user?.province}}</ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

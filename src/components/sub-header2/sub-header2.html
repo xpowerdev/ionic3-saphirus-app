@@ -1,0 +1,7 @@
+<ion-grid class="sub-header" padding-left padding-right>
+  <ion-row>
+    <ion-col [ngClass]="flag == 'a'? 'selected' : ''" (click)="btnClick('a')">{{category.a}}</ion-col>
+    <ion-col [ngClass]="flag == 'b'? 'selected' : ''" (click)="btnClick('b')">{{category.b}}</ion-col>
+    <ion-col [ngClass]="flag == 'c'? 'selected' : ''" (click)="btnClick('c')">{{category.c}}</ion-col>
+  </ion-row>
+</ion-grid>

@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar no-padding>
+    <main-header [data]="main_menu" (backClick)="back()"></main-header>
+    <ion-row>
+      <ion-col class="title">Productos</ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-row padding>
+
+    <ion-col col-6 *ngFor="let category of categories">
+      <div class="container" (click)="toBuy(category.id)">
+        <img src="{{category_root}}{{category?.image}}" height="75%">
+        <div class="name">{{category?.name}}</div>
+      </div>
+    </ion-col>
+    
+  </ion-row>  
+  
+</ion-content>

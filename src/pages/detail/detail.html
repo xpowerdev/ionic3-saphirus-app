@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar no-padding>
+    <main-header [data]="main_menu" (backClick)="toDistributor()"></main-header>
+    <sub-header3 [data] = "header" (btnClick)="select($event)"></sub-header3>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid no-padding *ngIf="infoId">
+    <ion-row padding-horizontal padding-top>
+        <ion-col col-12 margin-left class="label">Dirección : </ion-col>
+        <ion-col col-12 margin-left class="value">{{contact.address}} {{contact.city}} {{contact.province}}</ion-col>
+      </ion-row>
+    
+      <ion-row padding-horizontal padding-top>
+        <ion-col col-12 margin-left class="label">Tel : </ion-col>
+        <ion-col col-12 margin-left class="value" *ngFor="let phone of contact.phones">{{phone}}</ion-col>
+      </ion-row>
+    
+      <ion-row padding-horizontal padding-top *ngIf="contact.email">
+        <ion-col col-12 margin-left class="label">Email : </ion-col>
+        <ion-col col-12 margin-left class="value">{{contact.email}}</ion-col>
+      </ion-row>
+    
+      <ion-row padding-horizontal padding-top *ngIf="contact.web">
+        <ion-col col-12 margin-left class="label">Web : </ion-col>
+        <ion-col col-12 margin-left class="value">{{contact.web}}</ion-col>
+      </ion-row>
+  </ion-grid>
+  <ion-list *ngIf="!infoId">
+    <ion-item *ngFor="let review of reviews">
+      <ion-avatar item-start>
+        <img src="{{avatar_root}}{{review.image}}">
+      </ion-avatar>
+      <h2 class="name">{{review.firstname}} {{review.lastname}}</h2>
+      <div class="review-text">“{{review.review}}”</div>
+      <rating [(ngModel)]="review.star" readOnly="true" max="5" emptyStarIconName="md-star-outline" halfStarIconName="md-star-half" starIconName="md-star" nullable="false"></rating>
+    </ion-item> 
+  </ion-list>
+</ion-content>
+
+<ion-footer no-border>
+  <button ion-button round full *ngIf="!dist" (click)="contactDist(id)">ASOCIARME</button>
+  <button ion-button round full *ngIf="dist" (click)="contactDist(0)">DESASOCIARME</button>
+</ion-footer>

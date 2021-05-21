@@ -1,0 +1,34 @@
+<ion-grid class="sub-header">
+  <ion-row no-padding>
+    <img *ngIf="data" src="{{logo_root}}{{data.image}}">
+    <span>{{data.rating}}</span>
+  </ion-row>
+</ion-grid>
+
+<ion-grid class="confirm">
+  <ion-row align-items-center>
+    <ion-col col-7 padding-left>
+      <div class="title">{{data.name}}</div>
+      <div class="sub-title">{{data.city}}, {{data.province}}</div>
+    </ion-col>
+    <ion-col col-5 padding-right text-right>
+      <div><rating [(ngModel)]="data.star" readOnly="true" max="5" emptyStarIconName="md-star-outline" halfStarIconName="md-star-half" starIconName="md-star" nullable="false"></rating></div>
+      <div class="sub-title">{{data.voters}} valoraciones</div>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+<ion-grid class="info" no-padding>
+  <ion-row no-padding *ngIf="data.is_visible">
+    <ion-col col-6 text-center [ngClass]="activeItem==1? 'active' : ''" (click)="btnClicked(1)">
+      CONTACTO
+    </ion-col>
+    <ion-col col-6 text-center [ngClass]="activeItem==2? 'active' : ''" (click)="btnClicked(2)">
+      OPINIONES
+    </ion-col>
+  </ion-row>  
+  <ion-row no-padding *ngIf="!data.is_visible">
+    <ion-col col-12 text-center class="active">
+      OPINIONES
+    </ion-col>
+  </ion-row>
+</ion-grid>

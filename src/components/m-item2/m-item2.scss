@@ -1,0 +1,40 @@
+m-item2 {
+    ion-row {
+        background: #fff;
+    }
+
+    .sub-title {
+        color: #4d4d4d !important;
+    }
+
+    .title {
+        color: #4d4d4d !important;
+        font-size: 2em;
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
+
+    .number {
+        border: solid #0887e7 1px;
+        border-radius: 20px;
+        margin: 4px 5px 4px 0px;
+        padding: 6px 5px;
+        width: 50%;
+        text-align: center;
+
+        ion-icon{
+            padding: 0 8px;
+        }
+
+        span {
+            font-size: 1.2em;
+        }
+    }
+
+    .button-md,
+    .button-ios {
+        width: calc(100% - 4px);
+        height: 36px !important;
+        background-color: #0887e7;
+    }
+}

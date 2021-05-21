@@ -1,0 +1,66 @@
+page-detail {
+
+    ion-list{
+        margin-top: 5px !important;
+    }
+
+    .list-ios > .item-block:first-child {
+        border-top: none !important;
+    }
+
+    .item-md ion-avatar ion-img, .item-md ion-avatar img,
+    .item-ios ion-avatar ion-img, .item-ios ion-avatar img {
+        height: 50px;
+        width: 50px;
+    }
+
+    .list-md .item-block .item-inner,
+    .list-ios .item-block .item-inner {
+        border-bottom: none !important;
+    }
+
+    .list-ios > .item-block:last-child, .list-ios > .item-wrapper:last-child .item-block {
+        border-bottom: none !important;
+    }
+
+    .name {
+        color: #333;
+        font-size: 0.8em;
+        font-weight: 600;
+    }
+
+    .review-text {
+        color: #333;
+        font-size: 0.8em;
+        white-space: normal;
+    }
+
+    ul {
+        padding: 0px;
+        margin: 0 0 2px 0 !important;
+    
+        &.rating li {
+            padding: 5px 0px !important;
+            background: none;
+            color: #ffb400;
+        
+            ion-icon {
+                font-size: 1em;
+            }
+        }
+    }
+
+    .label {
+        font-size: 1.1em;
+        color: #666666;
+    }
+
+    .value {
+        font-size: 1.3em;
+        color: #0887e7;
+    }   
+
+    ion-footer {
+        padding: 5px 10vw 15px 10vw;
+    }
+}

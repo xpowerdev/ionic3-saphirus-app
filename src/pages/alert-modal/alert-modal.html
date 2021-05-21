@@ -1,0 +1,14 @@
+<ion-content>
+    <ion-grid class="modal">
+        <ion-row class="header">
+            <ion-col text-center padding-vertical>{{title}}</ion-col>
+            <!-- ¡TE HAS ASOCIADO! -->
+        </ion-row>
+        <ion-row class="content">
+            <ion-col col-12 text-center padding>{{message}}</ion-col>
+            <!-- Te asociaste a Conforam.<br>El distribuidor aprobará tu solicitud y podras empezar, mientras tanto podes ir armando tu pedido -->
+            <button ion-button round class="button1" (click)="dismiss()">{{button}}</button>            
+            <!-- HACE TU PEDIDO -->
+        </ion-row>
+    </ion-grid>
+</ion-content>

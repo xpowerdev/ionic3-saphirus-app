@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar no-padding>
+    <main-header [data]="main_menu" (backClick)="back()"></main-header>    
+    <ion-row>
+      <ion-col col-12 text-center class="sub-title">Cambiar datos</ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list padding> 
+    <ion-item>
+      <ion-label stacked>Email</ion-label>
+      <ion-input [(ngModel)]="data.email" type="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Teléfono</ion-label>
+      <ion-input [(ngModel)]="data.tel" type="number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>DNI</ion-label>
+      <ion-input [(ngModel)]="data.dni" type="number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Dirección</ion-label>
+      <ion-input [(ngModel)]="data.address" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Localidad</ion-label>
+      <ion-input [(ngModel)]="data.city" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Provincia</ion-label>
+      <ion-input [(ngModel)]="data.province" type="email"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-row padding>
+    <button ion-button round full (click)="update()">ACEPTAR</button>
+  </ion-row>
+</ion-content>

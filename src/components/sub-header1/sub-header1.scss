@@ -1,0 +1,93 @@
+sub-header1 {
+    .sub-header {
+        background: #f1f2ff;
+        padding-bottom: 10px;  
+        
+        ion-list {
+            border-bottom: solid #0887e7 1px;
+        }
+    
+        ion-item {
+            border-bottom: none !important;
+            box-shadow: none !important;
+            background: #f1f2ff;
+        }
+    
+        .list-ios > .item-block:first-child {
+            border-top: none !important;
+        }
+    
+        .item-inner {
+            padding-right: 0px !important;
+        }
+    
+        .text-input-md,
+        .text-input-ios {
+            margin: 0px;
+            color: #0887e7;
+        }
+    
+        .text-input::-moz-placeholder {
+            color: #0887e7;
+        }
+        
+        .text-input:-ms-input-placeholder {
+            color: #0887e7;
+        }
+        
+        .text-input::-webkit-input-placeholder {
+            text-indent: 0;
+            color: #0887e7;
+        }
+
+        ion-button {
+            padding: 0 !important;
+            margin: 0 !important;
+        }        
+
+        .item-md .item-button,
+        .item-ios .item-button {
+            padding: 0 !important;
+        }
+
+        .item-ios [item-right], .item-ios [item-end] {
+            margin: 0 !important;
+        }
+
+        ion-icon {
+            color: #0887e7;
+            width: 40px;
+            z-index: 99;
+            font-size: 2em;
+        }
+    
+        .item-md [item-end] {
+            margin: 0px !important;
+        }
+    } 
+
+    .catagery {
+        background: #c0c0c0;
+
+        ion-col {
+            padding-top: 0px;
+            padding-bottom: 0px;
+
+            .button {
+                height: 36px !important;
+                background: #f1f2ff;
+                border: solid 1px #a7a7a7;
+                border-radius: 5px;   
+                color: #0887e7;
+                text-align: center;
+                text-transform: unset;   
+            }
+        }
+    }
+
+    .actived {
+        background: #0887e7 !important;
+        color: #fff !important;
+        border-color: #0887e7 !important;
+    }
+}

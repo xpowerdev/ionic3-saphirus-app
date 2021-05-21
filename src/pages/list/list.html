@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-toolbar no-padding>
+    <main-header [data]="main_menu"></main-header>
+    <sub-header1 (itemBtnClick)="startSearch($event)"></sub-header1>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-row *ngIf="result">
+      <ion-col col-12 text-center class="header">RESULTADOS DE BUSQUEDA</ion-col>
+    </ion-row>
+    <m-item1 *ngFor="let list of lists" [data]="list" (itemBtnClick)="listClick($event, list)"></m-item1>
+    <div class="no-result" *ngIf="noResult">Sin resultados</div>
+</ion-content>

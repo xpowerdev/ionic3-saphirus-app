@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1782913824",
+    "firebase_url": "https://saphirus-6cabd.firebaseio.com",
+    "project_id": "saphirus-6cabd",
+    "storage_bucket": "saphirus-6cabd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1782913824:android:e7e2e620c145eb8a",
+        "android_client_info": {
+          "package_name": "com.saphirus.sp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1782913824-5p1c9c7mmp2vudvga25m7o2o9vi25oem.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "1782913824-5p1c9c7mmp2vudvga25m7o2o9vi25oem.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAytFF_X-PB784SndI4a4ZTbaCub4KKpVs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,79 @@
+page-register {
+    ion-content {
+        background-image: url('./../assets/imgs/bg.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+
+    .logo {
+        height: 16vh;
+        position: absolute;
+        top: 15vh;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    ion-list {
+        margin: 0 10vw !important;
+    }
+
+    .list-md .item-block .item-inner,
+    .list-ios .item-block .item-inner {
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    ion-item {
+        background-color: transparent !important;
+        box-shadow: none !important;
+        border: none !important;
+    }
+
+    .item-md,
+    .item-ios {
+        padding-left: 0px !important;
+    }
+    
+    .item-md.item-block .item-inner,
+    .item-ios.item-block .item-inner {
+        padding-right: 0px !important;
+    }
+
+    .text-input-md,
+    .text-input-ios {
+        color: #fff;
+        font-size: 0.8em !important;
+        margin: 0px 0px 1.8vh 0px !important;
+        border: solid 1px;
+        padding: 8px;
+        border-radius: 16px;
+        width: 100%;
+    }
+
+    .text-input::-moz-placeholder {
+        color: #fff;
+    }
+    
+    .text-input:-ms-input-placeholder {
+        color: #fff;
+    }
+    
+    .text-input::-webkit-input-placeholder {
+        text-indent: 0;
+        color: #fff;
+    }
+
+    .btn_group_bottom {
+        margin: 1vw 10vw 0 10vw !important;
+    }   
+    .btn {
+        text-transform: uppercase;
+        background-color: #0887e7 !important;
+    } 
+
+    .btn-outline {
+        color: #fff;
+        font-size: 0.8em;
+        text-transform: unset;
+    }
+}

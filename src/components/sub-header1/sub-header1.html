@@ -1,0 +1,18 @@
+<ion-grid class="sub-header" padding-left padding-right>
+  <ion-list no-margin>
+    <ion-item no-padding>
+      <button ion-button item-end clear (click)="btnClick(search)">
+          <ion-icon name="ios-search" text-right></ion-icon>
+      </button>
+      <ion-input item-content type="text" placeholder="Buscar" [(ngModel)] = "search"></ion-input>
+    </ion-item>
+  </ion-list>
+</ion-grid>
+
+<ion-grid class="catagery">
+  <ion-row>
+    <ion-col col-4><button full ion-button no-margin [ngClass] = "btn=='near'? 'actived' : ''" (click) = "btnClick('near')">Cercanos</button></ion-col>
+    <ion-col col-4><button full ion-button no-margin [ngClass] = "btn=='all'? 'actived' : ''" (click) = "btnClick('all')">Todos</button></ion-col>
+    <ion-col col-4><button full ion-button no-margin [ngClass] = "btn=='ranking'? 'actived' : ''" (click) = "btnClick('ranking')">Ranking</button></ion-col>
+  </ion-row>
+</ion-grid>

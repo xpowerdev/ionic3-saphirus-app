@@ -1,0 +1,15 @@
+<ion-grid class="header">
+  <ion-row>
+    <ion-col col-2 text-center>
+      <img *ngIf="data.menu" src="assets/imgs/menu.png" class="menu" alt="menu" menuToggle>
+      <ion-icon *ngIf="!data.menu" name="md-arrow-back" (click)="backClicked()"></ion-icon>
+    </ion-col>
+    <ion-col col-8 text-center>
+      <img src="assets/imgs/logo-chico.png" class="logo" alt="menu">
+    </ion-col>
+    <ion-col col-2 text-center (click)="toOrder()">
+      <img *ngIf="data.cart" src="assets/imgs/cart.png" class="cart" alt="cart">
+      <div *ngIf="order && data.cart" class="order">{{order}}</div>
+    </ion-col>
+  </ion-row>
+</ion-grid>

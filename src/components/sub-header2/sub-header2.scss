@@ -1,0 +1,21 @@
+sub-header2 {
+    .sub-header {
+        background: #fff; 
+        padding: 10px 0px 0px 0px !important;
+        border-bottom: solid #8d8d8d 1px;
+        
+        ion-col {
+            color: #a7a7a7;
+            text-align: center;
+            font-size: 1.2em;
+            text-transform: uppercase;
+            padding-left: 0px !important;
+            padding-right: 0px !important;
+        }
+
+        .selected {
+            border-bottom: solid #0887e7 2px;
+            color: #0887e7;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+<ion-content>
+  <img src="assets/imgs/logo-chico.png" class="logo" alt="logo">
+  <div class="btn_group_mid">
+    <ion-list> 
+      <ion-item>
+        <ion-label><img src="assets/imgs/email.png"> Email:</ion-label>
+        <ion-input [(ngModel)]="email" type="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label><img src="assets/imgs/lock.png"> Clave:</ion-label>
+        <ion-input [(ngModel)]="password" type="password"></ion-input>
+      </ion-item>
+
+    </ion-list>
+    <div class="forgot_pass">Olvidaste la clave?</div>
+    <button ion-button round outline class="btn-outline" (click)="login()">INGRESAR</button>
+  </div>
+  <div class="btn_group_bottom">
+    <button ion-button round full class="btn mt-20" (click)="toPage('RegisterPage')">QUIERO SER REVENDEDOR</button>
+    <button ion-button round outline class="btn-outline" (click)="toPage('ProductsPage')">VER CATALOGO</button>
+  </div>
+</ion-content>

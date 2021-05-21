@@ -1,0 +1,43 @@
+page-review {
+    ion-content{
+        .header {
+            color: #0887e7;
+            padding: 8px 0px;
+            font-size: 1.6em;
+            font-weight: 600;
+            border-bottom: solid #8d8d8d 1px;
+        }
+
+        .score {
+            font-size: 3em;
+            font-weight: 900;
+            padding: 0 10px;
+            color: #ffffff;
+            background: #ffa904;
+            width: 120px;
+            margin: auto;
+            border-radius: 5px;
+            min-height: 50px;
+        }
+
+        .group-score {
+            font-size: 2em;
+            padding: 0 5px;
+        }
+
+        .text-area {
+            width: 100%;
+            border-radius: 5px;
+            background: #e4e4e4;
+        }
+
+        .text-input-ios {
+            margin: 11px 8px 11px 8px !important;
+            width: calc(100% - 8px - 8px);
+        }
+
+        .active{
+            color: #ffa904 !important;
+        }
+    }
+}

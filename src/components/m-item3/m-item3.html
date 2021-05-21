@@ -1,0 +1,22 @@
+<ion-grid padding-horizontal class="item" [ngStyle]="{'border-bottom-color': bbcolor}">
+  <ion-row>
+    <ion-col col-6>
+      <div class="title">Número de pedido</div>
+      <div class="value">#{{data.id}}</div>
+    </ion-col>
+    <ion-col col-6>
+      <div class="title">Distribuidor</div>
+      <div class="value">{{data.distributor.name}}</div>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-6>
+      <div class="title">Fecha de pedido</div>
+      <div class="value">{{data.date | dateformat}}</div>
+    </ion-col>
+    <ion-col col-6>
+      <div class="title">Estado</div>
+      <div class="value">{{data.status}}</div>
+    </ion-col>
+  </ion-row>
+</ion-grid>

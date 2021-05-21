@@ -1,0 +1,20 @@
+m-item3 {
+    .item {
+        background-color: #fff;
+        border-bottom: solid 4px;
+        margin-bottom: 8px;
+
+        .title {
+            font-size: 0.9em;
+        }
+    
+        .value {
+            font-size: 1.3em;
+            color: #0887e7;
+        }
+    }
+
+    // .item:last-child {
+    //     border-bottom: none;
+    // }
+}
